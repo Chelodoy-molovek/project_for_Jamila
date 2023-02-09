@@ -1,7 +1,13 @@
+body{
+  background-color: #e2e2e2;
+
+}
 .container {
   display: flex;
   flex-direction: column;
   max-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .row_container {
   display: flex;
@@ -9,11 +15,47 @@
 }
 .element {
   width: 100%;
-  border: 1px solid;
-  background: url(./img/IMAGE\ 2023-01-26\ 11:13:33.png) no-repeat;
-  background-size: 100%;
-  background-color: antiquewhite;
+  /* border: 1px solid; */
+  /* background-image: url(./img/Koran.png); */
+  /* background-color: antiquewhite; */
 }
 .element:hover {
-  background-color: red;
+  background-color: rgb(158, 158, 158);
+}
+
+.popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.797);
+  top: 0;
+  left: 0;
+  display: none;
+  
+}
+.popup_body{
+  display: flex; 
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup_content{
+  background-color: white;
+  color: black;
+  width: 800px;
+  padding: 30px;
+  position: relative;
+}
+.popup_close{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.imgItems{
+  width: 100%;
+  height: 100%;
+}
+.header_phone{
+display: none;
 }
