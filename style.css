@@ -64,16 +64,16 @@ body {
 
 @media screen and (max-width: 960px) {
   .container {
-    margin-top: 70px;
+    margin-top: 130px;
     margin-bottom: 70px;
-    height: 80vh;
+    height: 50vh;
     width: 100%;
   }
   h1 {
     text-align: center;
     font-size: 22px;
   }
-  .popup_img{
+  .popup_img {
     margin-left: 30px;
   }
   .popup_img1 {
@@ -87,5 +87,8 @@ body {
   }
   .popup_text1 {
     font-size: 12px;
+  }
+  .element {
+    margin-bottom: 25px;
   }
 }
