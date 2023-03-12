@@ -17,7 +17,6 @@ for (let i = 0; i < 6; i++) {
     newDiv.append(newDivChild);
     newDivChild.className = `element`;
     newDivChild.id = `${database[count].id}`;
-
     count = count + 1;
   }
 }
@@ -33,12 +32,15 @@ let popup_h1 = document.querySelector(".popup_h1");
 allelements.forEach((element) => {
   element.addEventListener("click", (e) => {
     popupOpen.style.display = "block";
-    console.log(popup_image)
+    console.log(popup_image);
     for (let i = 0; i < database.length; i++) {
       if (database[i].id === +element.id) {
-        popup_image.src = `${database[i].img_popup}`
-        popup_text.append(database[i].text)
-        popup_h1.append(database[i].name)
+        popup_image.src = `${database[i].img_popup}`;
+        // popup_text.append(database[i].text)
+        popup_h1.append(database[i].name);
+        console.log(database[i]);
+
+        createParagraph(database[i]);
       }
     }
     e.preventDefault();
@@ -46,3 +48,12 @@ allelements.forEach((element) => {
 });
 
 ////////////////////////////////////////////////////////////////////////////
+function createParagraph(item) {
+  let paragraphs = item.text.split(/\n\s*\n/);
+  console.log(paragraphs);
+  for (let i = 0; i < paragraphs.length; i++) {
+    let newParag = document.createElement("p");
+    newParag.innerHTML = paragraphs[i];
+    popup_text.append(newParag);
+  }
+}
