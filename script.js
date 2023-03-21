@@ -1,7 +1,5 @@
 import { database } from "./database.js";
 const container = document.querySelector(".container");
-
-//////////////////////////////////////////////////////////////////////////// (create html blocks)
 let count = 0;
 
 for (let i = 0; i < 6; i++) {
@@ -21,8 +19,6 @@ for (let i = 0; i < 6; i++) {
   }
 }
 
-////////////////////////////////////////////////////////////////////////////   popup
-
 let allelements = document.querySelectorAll(".element");
 let popupOpen = document.querySelector(".popup");
 let popup_text = document.querySelector(".popup_text1");
@@ -36,7 +32,6 @@ allelements.forEach((element) => {
     for (let i = 0; i < database.length; i++) {
       if (database[i].id === +element.id) {
         popup_image.src = `${database[i].img_popup}`;
-        // popup_text.append(database[i].text)
         popup_h1.append(database[i].name);
         console.log(database[i]);
 
@@ -46,8 +41,6 @@ allelements.forEach((element) => {
     e.preventDefault();
   });
 });
-
-////////////////////////////////////////////////////////////////////////////
 function createParagraph(item) {
   let paragraphs = item.text.split(/\n\s*\n/);
   console.log(paragraphs);

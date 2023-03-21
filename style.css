@@ -1,14 +1,13 @@
+
 body {
   background-color: #e2e2e2;
-  font-family:Georgia, 'Times New Roman', Times, serif
-
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .header{
   height: 15vh;
   width: 100%;
 }
 .footer{
-  margin-top: 25px;
   height: 15vh;
   width: 100%;
 }
@@ -104,8 +103,6 @@ p {
   }
   .container {
     margin-top: 10px;
-    margin-bottom: 70px;
-    height: 50vh;
     width: 100%;
   }
   .popup_img1 {
